@@ -17,9 +17,9 @@ export default function App() {
   const ao = aoconnect({ MODE: "legacy" })
 
   const [formData, setFormData] = useState({
-    processId: "",
+    processId: "0syT13r0s0tgPmIed95bJnuSqaD29HQNN8D3ElLSrsc",
     data: "",
-    action: ""
+    action: "Info"
   })
 
   const [formErrors, setFormErrors] = useState({
@@ -64,7 +64,7 @@ export default function App() {
         process: formData.processId,
         data: formData.data,
         tags: formData.action ? [{ name: "Action", value: formData.action }] : [],
-        signer: createSigner(api)
+        signer: api.id.startsWith("wauth") ? api.getAoSigner() : createSigner(api)
       })
 
       console.log("Message ID:", mid)
@@ -121,6 +121,7 @@ export default function App() {
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
                 <div className="space-y-2">
+                  <label htmlFor="processId" className="text-sm p-1 text-muted-foreground">Target Process ID</label>
                   <Input
                     placeholder="Target Process ID"
                     className={`font-mono ${formErrors.processId ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
@@ -133,6 +134,7 @@ export default function App() {
                   )}
                 </div>
                 <div className="space-y-2">
+                  <label htmlFor="data" className="text-sm p-1 text-muted-foreground">Data</label>
                   <Input
                     placeholder="Data"
                     className="font-mono"
@@ -142,6 +144,7 @@ export default function App() {
                   />
                 </div>
                 <div className="space-y-2">
+                  <label htmlFor="action" className="text-sm p-1 text-muted-foreground">Action</label>
                   <Input
                     placeholder="Action"
                     className="font-mono"
