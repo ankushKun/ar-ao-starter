@@ -8,12 +8,16 @@ import { SendIcon, Loader2 } from "lucide-react"
 import { useEffect, useState } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
 import Navbar from "@/components/navbar"
+import { ARIO } from "@ar.io/sdk"
 
 export default function App() {
   const activeAddress = useActiveAddress()
   const { connect, connected, disconnect } = useConnection()
   const api = useApi()
   const ao = aoconnect({ MODE: "legacy" })
+  const ario = ARIO.init({})
+
+  const [primaryName, setPrimaryName] = useState("")
 
   const [formData, setFormData] = useState({
     processId: "0syT13r0s0tgPmIed95bJnuSqaD29HQNN8D3ElLSrsc",
@@ -30,6 +34,16 @@ export default function App() {
 
   // need this smol helper when using WAuth
   useEffect(() => { if (connected && !activeAddress) disconnect() }, [connected, activeAddress])
+
+  useEffect(() => {
+    if (activeAddress) {
+      ario.getPrimaryName({ address: activeAddress }).then(res => {
+        setPrimaryName(res.name || "No Primary Name Assigned")
+      }).catch(() => {
+        setPrimaryName("Failed to load Primary Name")
+      })
+    }
+  }, [activeAddress])
 
   const validateProcessId = (value: string) => {
     if (value.length === 0) return ""
@@ -94,6 +108,7 @@ export default function App() {
               <div className="text-xl sm:text-2xl font-mono text-center flex flex-col gap-2">
                 <div>Yayy! You are connected</div>
                 <div className="text-teal-300 text-sm sm:text-base break-all px-2">{activeAddress}</div>
+                <div className="text-sm text-muted-foreground">{primaryName}</div>
               </div>
               <img src={gif} draggable={false} alt="girl" className="hidden sm:block w-[256px]" />
             </>
