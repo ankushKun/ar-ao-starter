@@ -1,5 +1,3 @@
-import { ThemeToggleButton } from "@/components/theme-toggle"
-import { ConnectButton } from "@arweave-wallet-kit/react"
 import { useActiveAddress, useApi, useConnection } from "@arweave-wallet-kit/react"
 import { connect as aoconnect, createSigner } from "@permaweb/aoconnect"
 import gif from "@/assets/girl.gif"
@@ -9,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SendIcon, Loader2 } from "lucide-react"
 import { useState } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
+import Navbar from "@/components/navbar"
 
 export default function App() {
   const activeAddress = useActiveAddress()
@@ -82,17 +81,7 @@ export default function App() {
   return (
     <div className="min-h-screen text-foreground flex flex-col bg-foreground/5 items-center justify-center w-full">
       {/* Header */}
-      <header className="border-b w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-lg sm:text-xl font-bold">Arweave AO Starter</h1>
-          </div>
-          <div className="flex items-center gap-2">
-            <ThemeToggleButton />
-            <ConnectButton />
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="flex flex-col items-center justify-center p-4 sm:p-5 gap-6 sm:px-6 lg:px-20 grow w-full">
         <div className="rounded-lg w-full flex flex-col sm:flex-row items-center justify-evenly gap-6">
@@ -194,6 +183,7 @@ export default function App() {
             </Card>
           </div>
         )}
+        <a href="/#/another-page" className="text-sm text-foreground/50 p-10">goto another page</a>
       </main>
     </div>
   )

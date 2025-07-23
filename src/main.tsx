@@ -1,12 +1,16 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
 import { ThemeProvider } from '@/components/theme-provider.tsx'
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
 import { ArweaveWalletKit } from "@arweave-wallet-kit/react"
 import WanderStrategy from "@arweave-wallet-kit/wander-strategy"
 import WAuthStrategy from "@wauth/strategy"
 import { WAuthProviders } from "@wauth/strategy"
 import AosyncStrategy from "@vela-ventures/aosync-strategy"
+
+import App from './app'
+import AnotherPage from './another-page'
+
 
 
 function Main() {
@@ -33,7 +37,12 @@ function Main() {
       theme={{ displayTheme: "dark" }}
     >
       <ThemeProvider defaultTheme="dark">
-        <App />
+        <HashRouter>
+          <Routes>
+            <Route index element={<App />} />
+            <Route path="/another-page" element={<AnotherPage />} />
+          </Routes>
+        </HashRouter>
       </ThemeProvider>
     </ArweaveWalletKit>
   )
