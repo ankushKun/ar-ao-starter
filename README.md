@@ -11,8 +11,8 @@ All you need to get building on Arweave & AO
   - [Beacon Wallet](https://github.com/vela-ventures/ao-sync-sdk) (AO Sync- iOS mobile wallet connection)
 - [@permaweb/aoconnect](https://www.npmjs.com/package/@permaweb/aoconnect)
 - Shadcn/ui + TailwindCSS - Standard webdev stuff
+- [React Router](https://reactrouter.com/start/declarative/installation) - Routing pages obviously (use hash router for Arweave apps)
 - Vite + React + TS - Works best for deploying on Arweave (use [Arlink](https://arlink.xyz/))
-- React Router
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
