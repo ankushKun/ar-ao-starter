@@ -8,7 +8,7 @@ import WAuthStrategy from "@wauth/strategy"
 import { WAuthProviders } from "@wauth/strategy"
 import AosyncStrategy from "@vela-ventures/aosync-strategy"
 
-import App from './app'
+import App from './App'
 import AnotherPage from './another-page'
 
 
