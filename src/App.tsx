@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SendIcon, Loader2 } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
 import Navbar from "@/components/navbar"
 
@@ -27,6 +27,9 @@ export default function App() {
 
   const [output, setOutput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+
+  // need this smol helper when using WAuth
+  useEffect(() => { if (connected && !activeAddress) disconnect() }, [connected, activeAddress])
 
   const validateProcessId = (value: string) => {
     if (value.length === 0) return ""
