@@ -10,6 +10,7 @@ All you need to get building on Arweave & AO
   - [WAuth](https://github.com/subspace-dev/wauth) (web2 auth- Google, Discord, Github, X)
   - [Beacon Wallet](https://github.com/vela-ventures/ao-sync-sdk) (AO Sync- iOS mobile wallet connection)
 - [@permaweb/aoconnect](https://www.npmjs.com/package/@permaweb/aoconnect)
+- [ARIO SDK] - For anything related to ArNS
 - Shadcn/ui + TailwindCSS - Standard webdev stuff
 - [React Router](https://reactrouter.com/start/declarative/installation) - Routing pages obviously (use hash router for Arweave apps)
 - Vite + React + TS - Works best for deploying on Arweave (use [Arlink](https://arlink.xyz/))
