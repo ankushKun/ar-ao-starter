@@ -40,7 +40,7 @@
         "@radix-ui/react-tooltip": "^1.2.7",
         "@tailwindcss/vite": "^4.1.11",
         "@vela-ventures/aosync-strategy": "^1.0.13",
-        "@wauth/strategy": "^0.0.11",
+        "@wauth/strategy": "^0.0.12",
         "arweave": "^1.15.7",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
@@ -600,9 +600,9 @@
 
     "@vitejs/plugin-react": ["@vitejs/plugin-react@4.7.0", "", { "dependencies": { "@babel/core": "^7.28.0", "@babel/plugin-transform-react-jsx-self": "^7.27.1", "@babel/plugin-transform-react-jsx-source": "^7.27.1", "@rolldown/pluginutils": "1.0.0-beta.27", "@types/babel__core": "^7.20.5", "react-refresh": "^0.17.0" }, "peerDependencies": { "vite": "^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0" } }, "sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA=="],
 
-    "@wauth/sdk": ["@wauth/sdk@0.0.11", "", { "dependencies": { "@dha-team/arbundles": "^1.0.3", "@permaweb/aoconnect": "^0.0.85", "arconnect": "^1.0.4", "arweave": "^2.0.0-ec.1", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" }, "peerDependencies": { "pocketbase": "^0.26.1" } }, "sha512-4XTMg/+dtXETMfC+nrs6vMRFDVcJl6YhEP9RKiyqxwG9ON4qbPXd7jz2ir99UFnhkx40z3rrWWpSWrAnBcSuBQ=="],
+    "@wauth/sdk": ["@wauth/sdk@0.0.12", "", { "dependencies": { "@dha-team/arbundles": "^1.0.3", "@permaweb/aoconnect": "^0.0.85", "arconnect": "^1.0.4", "arweave": "^2.0.0-ec.1", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" }, "peerDependencies": { "pocketbase": "^0.26.1" } }, "sha512-ZAPeKDVdr9xCSPas5we886Ul+Ay7t3h63OxQI7VywzFqMd2mPMr6A1kt/lmsgoHMl4kfo8ZYKBTykgJ7wkL40A=="],
 
-    "@wauth/strategy": ["@wauth/strategy@0.0.11", "", { "dependencies": { "@arweave-wallet-kit/core": "^0.1.1", "@dha-team/arbundles": "^1.0.3", "@wauth/sdk": "^0.0.11", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" } }, "sha512-/4n4nLc54H3cmTOtDeUSQEdGRUhs8ziDMvl4vAw0duzgiQx72ajWEEIz/UM+TN86DGTr3YH4zbjwhk+z60pzPA=="],
+    "@wauth/strategy": ["@wauth/strategy@0.0.12", "", { "dependencies": { "@arweave-wallet-kit/core": "^0.1.1", "@dha-team/arbundles": "^1.0.3", "@wauth/sdk": "^0.0.12", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" } }, "sha512-v/eTwF8e+keiVfzkTSEypxMAL9OZ+XDGAiDWPosfF4wFUGlixlsXHBhJ2cFj9BMbIv8W6QQrFnmjjKxZdXhqjw=="],
 
     "@wyw-in-js/babel-preset": ["@wyw-in-js/babel-preset@0.4.1", "", { "dependencies": { "@babel/core": "^7.23.5", "@wyw-in-js/transform": "0.4.1" } }, "sha512-4mrcifqyZFyOHGXRkdHjLYxDgi5yVT7AuNG38G36oR/tS3asmCerkbCCaTkB5QxFOKOnjmeejHRBFCZ4pgSY4g=="],
 
