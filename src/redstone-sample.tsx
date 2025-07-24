@@ -7,6 +7,13 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { useState, useEffect } from "react";
 import redstone from "redstone-api";
 
@@ -14,7 +21,7 @@ interface TokenData {
   symbol: string;
   price: number;
   timestamp: string;
-  signatureAvailable: boolean;
+  source: Record<string, number>;
   icon: string;
 }
 
@@ -61,7 +68,18 @@ function TokenIcon({ token }: { token: TokenData }) {
   );
 }
 
+function formatProviderName(provider: string): string {
+  return provider
+    .split(/[-_]/)  
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+}
+
 function TokenCard({ token }: { token: TokenData }) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const hasSourceData = token.source && Object.keys(token.source).length > 0;
+
   return (
     <Card className="w-full">
       <CardHeader>
@@ -79,12 +97,34 @@ function TokenCard({ token }: { token: TokenData }) {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span className="font-medium">Signature:</span>
-            <span className="text-lg">
-              {token.signatureAvailable ? "✅" : "❌"}
-            </span>
-          </div>
+          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogTrigger asChild>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full text-sm"
+              >
+                🔍 Sources
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle>Sources for {token.symbol}</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-2">
+                {hasSourceData ? (
+                  Object.entries(token.source).map(([provider, price]) => (
+                    <div key={provider} className="flex justify-between items-center py-1">
+                      <span className="text-sm font-medium">{formatProviderName(provider)}:</span>
+                      <span className="text-sm">${price.toFixed(2)}</span>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-sm text-muted-foreground">No source data available.</p>
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </CardContent>
     </Card>
@@ -108,7 +148,7 @@ export default function RedstoneSample() {
           symbol,
           price: data.value,
           timestamp: new Date(data.timestamp).toISOString(),
-          signatureAvailable: Boolean((data as any).signature),
+          source: (data as any).source || {},
           icon: iconMap[symbol] || `${symbol.toLowerCase()}-logo.svg`,
         })
       );
