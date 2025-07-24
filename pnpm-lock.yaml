@@ -167,6 +167,9 @@ importers:
       recharts:
         specifier: 2.15.4
         version: 2.15.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      redstone-api:
+        specifier: ^0.4.13
+        version: 0.4.13
       sonner:
         specifier: ^2.0.6
         version: 2.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1832,6 +1835,9 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
+  ar-gql@0.0.6:
+    resolution: {integrity: sha512-eXKsXGQcx8uwxwlFJzBXA17Qsg+Gty6tcp85IB5SX1iop7NsXLQ/iH2WEz69NCz2/Zcb81C1QryIiNTgw0/4aA==}
+
   arconnect@0.4.2:
     resolution: {integrity: sha512-Jkpd4QL3TVqnd3U683gzXmZUVqBUy17DdJDuL/3D9rkysLgX6ymJ2e+sR+xyZF5Rh42CBqDXWNMmCjBXeP7Gbw==}
 
@@ -1844,6 +1850,9 @@ packages:
   aria-hidden@1.2.6:
     resolution: {integrity: sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==}
     engines: {node: '>=10'}
+
+  arweave-multihost@0.1.0:
+    resolution: {integrity: sha512-biIkzQ3oc4RLV1MORQnqWz51IazP++K/8SsYMjUokK0cUfBLqom4pufKFCjTkGQIZMWWanXxnZqL66hHPgTCgA==}
 
   arweave-stream-tx@1.2.2:
     resolution: {integrity: sha512-bNt9rj0hbAEzoUZEF2s6WJbIz8nasZlZpxIw03Xm8fzb9gRiiZlZGW3lxQLjfc9Z0VRUWDzwtqoYeEoB/JDToQ==}
@@ -1885,6 +1894,9 @@ packages:
     resolution: {integrity: sha512-aR99oXhpEDGo0UuAlYcn2iGRds30k366Zfa05XWScR9QaQD4JYiP3/1Qt1u7YlefUOK+cn0CcwoL1oefavQUlQ==}
     peerDependencies:
       axios: 0.x || 1.x
+
+  axios@0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
 
   axios@1.11.0:
     resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
@@ -2201,6 +2213,9 @@ packages:
 
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+
+  deep-sort-object@1.0.2:
+    resolution: {integrity: sha512-Ko2XVMhRhz5Mxyb+QhLX13SHgcK1vuxc6XEfOyTMlbRbv7bhSmMqUw4ywqRwKgV25W+FDIaZjPWQrdblHCTwdA==}
 
   deepmerge@2.2.1:
     resolution: {integrity: sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==}
@@ -3064,6 +3079,9 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
+  pako@2.1.0:
+    resolution: {integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==}
+
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -3317,6 +3335,9 @@ packages:
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  redstone-api@0.4.13:
+    resolution: {integrity: sha512-PNPo9NZpTVEARAAtcbCs7B+ys9nLdcDDtw0fIl+5+RHGtvBEP99wR3W84f/Leazn0esn4ttRAL9SjMaLzS4zbA==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -5748,6 +5769,12 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
+  ar-gql@0.0.6:
+    dependencies:
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+
   arconnect@0.4.2:
     dependencies:
       arweave: 1.15.7
@@ -5759,6 +5786,13 @@ snapshots:
   aria-hidden@1.2.6:
     dependencies:
       tslib: 2.8.1
+
+  arweave-multihost@0.1.0:
+    dependencies:
+      arweave: 1.15.7
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
 
   arweave-stream-tx@1.2.2(arweave@1.15.7):
     dependencies:
@@ -5821,6 +5855,12 @@ snapshots:
     dependencies:
       axios: 1.8.4
       is-retry-allowed: 2.2.0
+
+  axios@0.21.4:
+    dependencies:
+      follow-redirects: 1.15.9(debug@4.4.1)
+    transitivePeerDependencies:
+      - debug
 
   axios@1.11.0(debug@4.4.1):
     dependencies:
@@ -6196,6 +6236,10 @@ snapshots:
   decimal.js-light@2.5.1: {}
 
   deep-is@0.1.4: {}
+
+  deep-sort-object@1.0.2:
+    dependencies:
+      is-plain-object: 2.0.4
 
   deepmerge@2.2.1: {}
 
@@ -7085,6 +7129,8 @@ snapshots:
 
   pako@1.0.11: {}
 
+  pako@2.1.0: {}
+
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
@@ -7348,6 +7394,18 @@ snapshots:
       recharts-scale: 0.4.5
       tiny-invariant: 1.3.3
       victory-vendor: 36.9.2
+
+  redstone-api@0.4.13:
+    dependencies:
+      ar-gql: 0.0.6
+      arweave: 1.15.7
+      arweave-multihost: 0.1.0
+      axios: 1.11.0(debug@4.4.1)
+      deep-sort-object: 1.0.2
+      lodash: 4.17.21
+      pako: 2.1.0
+    transitivePeerDependencies:
+      - debug
 
   require-directory@2.1.1: {}
 
