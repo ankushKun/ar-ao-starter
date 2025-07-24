@@ -40,7 +40,7 @@
         "@radix-ui/react-tooltip": "^1.2.7",
         "@tailwindcss/vite": "^4.1.11",
         "@vela-ventures/aosync-strategy": "^1.0.13",
-        "@wauth/strategy": "^0.0.10",
+        "@wauth/strategy": "^0.0.11",
         "arweave": "^1.15.7",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
@@ -600,9 +600,9 @@
 
     "@vitejs/plugin-react": ["@vitejs/plugin-react@4.7.0", "", { "dependencies": { "@babel/core": "^7.28.0", "@babel/plugin-transform-react-jsx-self": "^7.27.1", "@babel/plugin-transform-react-jsx-source": "^7.27.1", "@rolldown/pluginutils": "1.0.0-beta.27", "@types/babel__core": "^7.20.5", "react-refresh": "^0.17.0" }, "peerDependencies": { "vite": "^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0" } }, "sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA=="],
 
-    "@wauth/sdk": ["@wauth/sdk@0.0.10", "", { "dependencies": { "@dha-team/arbundles": "^1.0.3", "arconnect": "^1.0.4", "arweave": "^2.0.0-ec.1", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" }, "peerDependencies": { "pocketbase": "^0.26.1" } }, "sha512-xLeDehkmZr+muVtKGZM68Uo+cyBhUYWAGnJp4he+3DaTDg7TQ6j0pN5WRUEym9wloJ9D314gwpdMdVZY/X5Orw=="],
+    "@wauth/sdk": ["@wauth/sdk@0.0.11", "", { "dependencies": { "@dha-team/arbundles": "^1.0.3", "@permaweb/aoconnect": "^0.0.85", "arconnect": "^1.0.4", "arweave": "^2.0.0-ec.1", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" }, "peerDependencies": { "pocketbase": "^0.26.1" } }, "sha512-4XTMg/+dtXETMfC+nrs6vMRFDVcJl6YhEP9RKiyqxwG9ON4qbPXd7jz2ir99UFnhkx40z3rrWWpSWrAnBcSuBQ=="],
 
-    "@wauth/strategy": ["@wauth/strategy@0.0.10", "", { "dependencies": { "@arweave-wallet-kit/core": "^0.1.1", "@dha-team/arbundles": "^1.0.3", "@wauth/sdk": "^0.0.10", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" } }, "sha512-D2oSQBqsxmTF5Jdkfay/s4v2WShJFCqD2rosJNdB5gQq5hduhk69Kyn2xPk7C0Ah/Cjj85w47LBfHr2Ywr7qbQ=="],
+    "@wauth/strategy": ["@wauth/strategy@0.0.11", "", { "dependencies": { "@arweave-wallet-kit/core": "^0.1.1", "@dha-team/arbundles": "^1.0.3", "@wauth/sdk": "^0.0.11", "axios": "^1.10.0", "vite-plugin-node-polyfills": "^0.24.0" } }, "sha512-/4n4nLc54H3cmTOtDeUSQEdGRUhs8ziDMvl4vAw0duzgiQx72ajWEEIz/UM+TN86DGTr3YH4zbjwhk+z60pzPA=="],
 
     "@wyw-in-js/babel-preset": ["@wyw-in-js/babel-preset@0.4.1", "", { "dependencies": { "@babel/core": "^7.23.5", "@wyw-in-js/transform": "0.4.1" } }, "sha512-4mrcifqyZFyOHGXRkdHjLYxDgi5yVT7AuNG38G36oR/tS3asmCerkbCCaTkB5QxFOKOnjmeejHRBFCZ4pgSY4g=="],
 
