@@ -10,6 +10,7 @@ import AosyncStrategy from "@vela-ventures/aosync-strategy"
 
 import App from './App'
 import AnotherPage from './another-page'
+import RedstoneSample from './redstone-sample'
 
 
 
@@ -41,6 +42,7 @@ function Main() {
           <Routes>
             <Route index element={<App />} />
             <Route path="/another-page" element={<AnotherPage />} />
+            <Route path="/redstone-sample" element={<RedstoneSample />} />
           </Routes>
         </HashRouter>
       </ThemeProvider>

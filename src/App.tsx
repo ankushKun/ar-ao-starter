@@ -202,6 +202,7 @@ export default function App() {
           </div>
         )}
         <a href="/#/another-page" className="text-sm text-foreground/50 p-10">goto another page</a>
+        <a href="/#/redstone-sample" className="text-sm text-foreground/50 p-10">goto redstone page</a>
       </main>
     </div>
   )
